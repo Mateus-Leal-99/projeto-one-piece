@@ -1,0 +1,140 @@
+body{
+	font-family: 'Pirata One', cursiva;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.imagem-fundo{
+	min-height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.conteudo{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.carrossel{
+	display: flex;
+	min-height: 45vh;
+	justify-content: center;
+	margin-top: 25px;
+	gap: 200px;
+}
+
+.titulo{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.imagem-titulo{
+	max-width: 300px;
+}
+
+.descricao{
+	letter-spacing: 2px;
+	line-height: 40px;
+	max-width: 400px;
+	font-size: 35px;
+	color: #ffffff;
+	margin: auto 0;
+	text-align: center;
+	-webkit-text-stroke: 1px #000000;
+	animation: mudarDescricao 1s;
+	display: none;
+}
+
+.logo{
+	max-width: 350px;
+	max-height: 350px;
+	margin: auto 0;
+	animation: mudarLogo 1s;
+	display: none;
+}
+
+.carrossel .logo.ativo{
+	display: block;
+}
+
+.carrossel .descricao.ativo{
+	display: block;
+}
+
+.botoes-carrossel{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.botoes-carrossel .botao{
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.botoes-carrossel .botao.selecionado{
+	background-color: #861a22;
+}
+
+@keyframes mudarLogo{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 2;
+	}
+}
+
+@keyframes mudarDescricao{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 2;
+	}
+}
+
+.menu-lateral{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.menu-lateral ul{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.menu-lateral .icone{
+	width: 30px;
+	transition: 0.3s ease-in-out;
+}
+
+.menu-lateral .icone:hover{
+	transform: scale(1.2);
+}
+
+.menu-lateral .icone-dois{
+	filter: invert(1);
+	width: 30px;
+	transition: 0.3s ease-in-out;
+	
+}
+
+.menu-lateral .icone-dois:hover{
+	transform: scale(1.2);
+}
